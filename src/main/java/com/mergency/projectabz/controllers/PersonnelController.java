@@ -24,7 +24,7 @@ public class PersonnelController {
     }
 
     @PostMapping("/post/personnel")
-    public ResponseEntity<Personnel> creatPersonnel(@RequestBody Personnel personnel) {
+    public ResponseEntity<Personnel> postPersonnel(@RequestBody Personnel personnel) {
         Personnel savedPersonnel = personnelService.createPersonnel(personnel);
         return new ResponseEntity<>(savedPersonnel, HttpStatus.CREATED);
     }
